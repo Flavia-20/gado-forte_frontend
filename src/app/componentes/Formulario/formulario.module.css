@@ -10,11 +10,11 @@
 }
 
 .h1Form{
-    font-size:3rem;
+    font-size:2.5rem;
     font-weight: 600;
     padding: 2rem;
     justify-content: center;
-    border: 2px rgb(47, 255, 0) solid;
+    /*border: 2px rgb(47, 255, 0) solid;*/
 }
 
 .InputForm {

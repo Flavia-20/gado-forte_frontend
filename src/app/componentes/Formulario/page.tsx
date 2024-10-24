@@ -1,11 +1,12 @@
 'use client'; // Adiciona isso para indicar que o componente é um Client Component
+
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
 export default function Formulario({ tipo }) {
   const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router
 
   const handleSubmit = async (e) => {
@@ -22,7 +23,7 @@ export default function Formulario({ tipo }) {
         },
         body: JSON.stringify({
           nome,
-          email
+          senha
         }),
       });
 
@@ -35,7 +36,7 @@ export default function Formulario({ tipo }) {
         if (tipo === 'login') {
           router.push('../animais'); // Redireciona para a página "home" após login
         } else {
-          router.push('/cadastro-completo'); // Redireciona para a página de sucesso de cadastro
+          router.push('../cadastro'); // Redireciona para a página de sucesso de cadastro
         }
       } else {
         console.error('Erro:', data.message);
@@ -47,6 +48,7 @@ export default function Formulario({ tipo }) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.FormLogin}>
+      <h1 className={styles.h1Form} >{tipo === 'login' ? 'Login' : 'Primeiro cadastro'}</h1>
       <div>
         <label>Nome:</label>
         <input className={styles.InputForm}
@@ -57,12 +59,12 @@ export default function Formulario({ tipo }) {
         />
       </div>
       <div>
-        <label>Email:</label>
+        <label>Senha:</label>
         <input className={styles.InputForm}
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Digite seu email"
+          type="password"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          placeholder="Digite sua senha"
         />
       </div>
       <button type="submit">{tipo === 'login' ? 'Entrar' : 'Cadastrar'}</button>
