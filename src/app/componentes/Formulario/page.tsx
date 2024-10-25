@@ -1,5 +1,9 @@
 'use client'; // Adiciona isso para indicar que o componente é um Client Component
 
+import Image from "next/image";
+import logoPreta from "@/app/icones/logoPreta.png";
+
+
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
@@ -48,7 +52,15 @@ export default function Formulario({ tipo }) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.FormLogin}>
-      <h1 className={styles.h1Form} >{tipo === 'login' ? 'Login' : 'Primeiro cadastro'}</h1>
+
+      <Image
+        src={logoPreta}
+        width={130}
+        height={90}    
+        alt="logo"
+      />
+
+      <h1 className={styles.h1Form} >{tipo === 'login' ? 'Login' : 'Seu cadastro'}</h1>
       <div>
         <label>Nome:</label>
         <input className={styles.InputForm}
@@ -67,6 +79,7 @@ export default function Formulario({ tipo }) {
           placeholder="Digite sua senha"
         />
       </div>
+      <br/>
       <button type="submit">{tipo === 'login' ? 'Entrar' : 'Cadastrar'}</button>
     </form>
   );

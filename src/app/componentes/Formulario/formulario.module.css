@@ -4,7 +4,6 @@
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     min-height: 70vh;/* Garante que o formulário esteja centralizado na tela toda */
-    border: 2px red solid;
     font-size: 1.5rem;
     padding: 2rem;
 }

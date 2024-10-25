@@ -48,6 +48,11 @@ export default function Formulario({ tipo }) {
     }
   };
 
+  const handleCancel  = (e) => {
+    e.preventDefault();
+    router.push('/animais'); 
+  };
+
   return (
    <main>
         <Header/>
@@ -94,9 +99,9 @@ export default function Formulario({ tipo }) {
               />
           </div>
           <br></br>
-          <button type="submit">{tipo ='Cadastar'}</button>
-          <br></br>
-          <button type='submit'>Cancelar</button>
+          <button type="submit">Cadastar</button>
+          <br/>
+          <button onClick={handleCancel}>Cancelar</button>
         </form>
    </main>
   );

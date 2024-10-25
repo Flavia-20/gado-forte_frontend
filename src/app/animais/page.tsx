@@ -1,3 +1,5 @@
+'use client'; 
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -44,6 +46,16 @@ export default function Animais() {
         ) : (
          
         )}*/}
+
+        <div 
+              style={{ border: '1px solid gray', padding: '10px', marginBottom: '10px', cursor: 'pointer' }}
+              //onClick={() => handleClick(animal.id)}
+            >
+              <p>Nome: vaca 1</p>
+              <p>Sexo: femea</p>
+              <p>Data de Nascimento: 12/08/2019</p>
+              <p>Raça: mestiço</p>
+            </div>
       </main>
       <p>Carregando dados...</p>
       
