@@ -9,7 +9,7 @@ export default function Footer(){
           <footer className={style.footer}>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="../animais"
+            href="/animais"
             rel="noopener noreferrer"
           >
             <svg 

@@ -1,18 +1,17 @@
-'use client'; // Adiciona isso para indicar que o componente é um Client Component
+'use client';
 
 import Header from '@/app/componentes/Header/page';
 import Footer from '@/app/componentes/Footer/page';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Hook para redirecionamento
+import { useRouter } from 'next/navigation';
 import styles from "@/app/componentes/Formulario/formulario.module.css";
 
 
-export default function cadastraVacina(){
+export default function cadastrarPeso(){
         
-        const [nome, setNome] = useState('');
-        const [aplicador, setAplicador] = useState('');
-        const [dataAplicacao, setDataAplicacao] = useState(''); // Novo estado para data de nascimento
+        const [peso, setPeso] = useState('');
+        const [dataPesagem, setDataPesagem] = useState(''); 
         const router = useRouter(); // Instância do router
       
         const handleSubmit = async (e) => {
@@ -27,9 +26,8 @@ export default function cadastraVacina(){
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                  nome,
-                  aplicador,
-                  dataAplicacao
+                    peso,
+                    dataPesagem
               }),
             });
       
@@ -58,34 +56,25 @@ export default function cadastraVacina(){
               <Header/>
               <Footer/>              
               <form onSubmit={handleSubmit} className={styles.FormLogin}>
-                <h1>Cadastro da vacina </h1>
+                <h1>Cadastro de peso</h1>
                 <br />
                 <div>
-                    <label>Nome da vacina:</label>
+                    <label>Cadastro de peso: </label>
                     <input className={styles.InputForm}
                     type="text"
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                    placeholder="Digite o nome da vacina aqui"
+                    value={peso}
+                    onChange={(e) => setPeso(e.target.value)}
+                    placeholder="Digite o peso do animal"
                     />
                 </div>
                 <div>
-                    <label>Nome de quem aplicou:</label>
-                    <input className={styles.InputForm}
-                    type="text"
-                    value={aplicador}
-                    onChange={(e) => setAplicador(e.target.value)}
-                    placeholder="Quem aplicou a vacina?"
-                    />
-                </div>
-                <div>
-                    <label>Data da aplicacao:</label>
+                    <label>Data da pesagem:</label>
                     <input
                     className={styles.InputForm}
                     type="date"
-                    value={dataAplicacao} // Usando o estado correto
-                    onChange={(e) => setDataAplicacao(e.target.value)} // Atualiza o estado de data de nascimento
-                    placeholder="Digite a data da aplicação"
+                    value={dataPesagem} // Usando o estado correto
+                    onChange={(e) => setDataPesagem(e.target.value)} // Atualiza o estado de data de nascimento
+                    placeholder="Digite a data da pesagem"
                     />
                 </div>
                 <br/>

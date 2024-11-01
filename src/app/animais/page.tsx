@@ -1,10 +1,10 @@
 'use client'; 
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-
-import Header from '../componentes/Header/page';
-import Footer from '../componentes/Footer/page';
+import router, { useRouter } from 'next/router';
+import Botao from '../componentes/Botao/Botao';
+import Header from '@/app/componentes/Header/page';
+import Footer from '@/app/componentes/Footer/page';
 
 export default function Animais() {
   //const [animais, setAnimais] = useState([]);
@@ -35,12 +35,24 @@ export default function Animais() {
             <div 
               key={index} 
               style={{ border: '1px solid gray', padding: '10px', marginBottom: '10px', cursor: 'pointer' }}
-              //onClick={() => handleClick(animal.id)}
             >
               <p>Nome: {animal.nome}</p>
               <p>Sexo: {animal.sexo}</p>
               <p>Data de Nascimento: {animal['Data de nascimento']}</p>
               <p>Raça: {animal.raça}</p>
+               <div>
+                <button><a href={`../animais/${id}/vacinas`}
+                  rel="noopener noreferrer">
+                  <p>Ver Vacinas</p>
+                  </a>
+                </button>
+                <button className="">
+                  <a href={`../animais/${id}/Pesagens`}
+                  rel="noopener noreferrer">
+                  <p>Ver Pesagens</p>
+                  </a>
+                </button>
+              </div>
             </div>
           ))
         ) : (
@@ -48,13 +60,29 @@ export default function Animais() {
         )}*/}
 
         <div 
-              style={{ border: '1px solid gray', padding: '10px', marginBottom: '10px', cursor: 'pointer' }}
-              //onClick={() => handleClick(animal.id)}
+              style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
             >
               <p>Nome: vaca 1</p>
               <p>Sexo: femea</p>
               <p>Data de Nascimento: 12/08/2019</p>
               <p>Raça: mestiço</p>
+
+              <div>
+                <button><a href={`../animais/${1}/vacinas`}
+                  rel="noopener noreferrer">
+                  <p>Ver Vacinas</p>
+                  </a>
+                </button>
+                <button className="">
+                  <a href={`../animais/${1}/Pesagens`}
+                  rel="noopener noreferrer">
+                  <p>Ver Pesagens</p>
+                  </a>
+                </button>
+              </div>
+
+              {/*<Botao href="../animais/${1}/pesagens" texto="Ver pesagens"></Botao>
+              <Botao href="../animais/${1}/pesagens" texto="Ver pesagens"></Botao>*/}
             </div>
       </main>
       <p>Carregando dados...</p>

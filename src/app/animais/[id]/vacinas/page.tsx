@@ -2,9 +2,9 @@
 
 //import { useRouter } from 'next/router';
 //import { useEffect, useState } from 'react';
-import Header from '../../componentes/Header/page';
-import Footer from '../../componentes/Footer/page';
-import Botao from '../../componentes/Botao/Botao';
+import Header from '../../../componentes/Header/page';
+import Footer from '../../../componentes/Footer/page';
+import Botao from '../../../componentes/Botao/Botao';
 
 export default function Vacinas() {
   /*const router = useRouter();
@@ -34,6 +34,7 @@ export default function Vacinas() {
             <div key={index}>
               <p>Nome: {vacina.nome}</p>
               <p>Data de Aplicação: {vacina.dataAplicacao}</p>
+              <p>Restições: texto de restrições<p>
             </div>
           ))
         ) : (
@@ -42,9 +43,16 @@ export default function Vacinas() {
       </main>*/}
 
       <p>aqui vai a lista das vacinas de determinado animal</p>
+      <div style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
+            >
+              <p>Vacina: Contra febre</p>
+              <p>Data de aplicação: 30/10/2024</p>
+              <p>texto de restrições dessa vacina</p>
+              
+            </div>
 
       <div>{/*estilizar o botão */}
-      <Botao texto="Cadastrar nova vacina" pagina={`../animais/1/cadastrar-vacina`}/>
+      <Botao texto="Cadastrar nova vacina" pagina={`../1/cadastrar-vacina`}/>
       </div>
       
     </div>
