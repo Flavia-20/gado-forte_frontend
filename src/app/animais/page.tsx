@@ -37,7 +37,6 @@ export default function Animais() {
               style={{ border: '1px solid gray', padding: '10px', marginBottom: '10px', cursor: 'pointer' }}
             >
               <p>Nome: {animal.nome}</p>
-              <p>Sexo: {animal.sexo}</p>
               <p>Data de Nascimento: {animal['Data de nascimento']}</p>
               <p>Raça: {animal.raça}</p>
                <div>
@@ -63,7 +62,6 @@ export default function Animais() {
               style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
             >
               <p>Nome: vaca 1</p>
-              <p>Sexo: femea</p>
               <p>Data de Nascimento: 12/08/2019</p>
               <p>Raça: mestiço</p>
 

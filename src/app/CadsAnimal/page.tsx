@@ -7,10 +7,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../componentes/Formulario/formulario.module.css';
 
-export default function Formulario({ tipo }) {
+export default function Formulario({ }) {
   const [nome, setNome] = useState('');
   const [raca, setRaca] = useState('');
-  const [sexo, setSexo] = useState('');
   const [dataNascimento, setDataNascimento] = useState(''); // Novo estado para data de nascimento
   const router = useRouter(); // Instância do router
 
@@ -29,7 +28,6 @@ export default function Formulario({ tipo }) {
         body: JSON.stringify({
             nome,
             raca,
-            sexo,
             dataNascimento
         }),
       });
@@ -59,7 +57,7 @@ export default function Formulario({ tipo }) {
         <Footer/>
         
         <form onSubmit={handleSubmit} className={styles.FormLogin}>
-          <h1>{tipo = 'Cadastro de Animais'}</h1>
+          <h1>Cadastro de Animais</h1>
           <br></br>
           <div>
               <label>Nome do animal:</label>
@@ -79,7 +77,7 @@ export default function Formulario({ tipo }) {
               placeholder="Digite a raça do animal"
               />
           </div>
-          <div>
+          {/*<div>
               <label>Sexo do Animal:</label>
               <input className={styles.InputForm}
               type="text"
@@ -87,7 +85,7 @@ export default function Formulario({ tipo }) {
               onChange={(e) => setSexo(e.target.value)}
               placeholder="Digite a raça do animal"
               />
-          </div>
+          </div>*/}
           <div>
               <label>Data de Nascimento:</label>
               <input
