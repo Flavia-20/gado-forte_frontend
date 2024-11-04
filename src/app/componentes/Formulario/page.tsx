@@ -8,7 +8,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
-export default function Formulario({ tipo }: { tipo: string }) {
+interface FormularioProps {
+  tipo: string; // Ou defina como 'Cadastro de Animais' | 'Edição de Animais' se o valor for fixo.
+}
+
+export default function Formulario({ tipo }: FormularioProps)  {
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router

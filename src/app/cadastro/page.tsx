@@ -5,7 +5,7 @@ export default function Cadastro(){
     return(
               
         <main>
-            <Formulario tipo = 'cadastro'/>
+            <Formulario tipo = "cadastro"/>
         </main>
      
 
