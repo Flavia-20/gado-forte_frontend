@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
-export default function Formulario({ tipo }) {
+export default function Formulario({ tipo }: { tipo: string }) {
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router
