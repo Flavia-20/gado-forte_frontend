@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from "@/app/componentes/Formulario/formulario.module.css";
 
 
-export default function cadastraVacina(){
+export default function CadastraVacina(){
         
         const [nome, setNome] = useState('');
         const [aplicador, setAplicador] = useState('');

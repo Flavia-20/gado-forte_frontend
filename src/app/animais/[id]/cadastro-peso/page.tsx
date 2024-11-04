@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import styles from "@/app/componentes/Formulario/formulario.module.css";
 
 
-export default function cadastrarPeso(){
+export default function CadastrarPeso(){
         
         const [peso, setPeso] = useState('');
         const [dataPesagem, setDataPesagem] = useState(''); 
