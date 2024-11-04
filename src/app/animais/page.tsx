@@ -1,8 +1,8 @@
 'use client'; 
 
-import { useEffect, useState } from 'react';
-import router, { useRouter } from 'next/router';
-import Botao from '../componentes/Botao/Botao';
+//import { useEffect, useState } from 'react';
+//import router, { useRouter } from 'next/router';
+//import Botao from '../componentes/Botao/Botao';
 import Header from '@/app/componentes/Header/page';
 import Footer from '@/app/componentes/Footer/page';
 
