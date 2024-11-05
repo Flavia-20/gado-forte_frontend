@@ -14,7 +14,7 @@ export default function CadastrarPeso(){
         const [dataPesagem, setDataPesagem] = useState(''); 
         const router = useRouter(); // Instância do router
       
-        const handleSubmit = async (e) => {
+        const handleSubmit = async (e: { preventDefault: () => void; }) => {
           e.preventDefault();
       
           const url = '/api/cadastrarVacina'; 
@@ -46,7 +46,7 @@ export default function CadastrarPeso(){
           }
         };
 
-        const handleCancel  = (e) => {
+        const handleCancel  = (e: { preventDefault: () => void; }) => {
             e.preventDefault();
             router.push('/animais'); // Redireciona para a página inicial
         };

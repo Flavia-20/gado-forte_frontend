@@ -1,16 +1,21 @@
 import  styles  from "../Botao/botao.module.css";
 
+interface BotaoProps {
+    texto: string; // Aqui
+    pagina: string; // E aqui
+  }
 
-export default function Botao(props){
+export default function Botao({ texto, pagina }: BotaoProps){
     return(
         <div className="flex gap-9 items-center flex-col transition-colors">
             <a 
             className={styles.Botao}
-            href={props.pagina}
+            href={pagina}
             rel="noopener noreferrer"
             >
-            <p>{props.texto}</p>
+            <p>{texto}</p>
             </a>
+            
         </div>
     );
 }

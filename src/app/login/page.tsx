@@ -1,4 +1,4 @@
-import Formulario from "../componentes/Formulario/page";
+import Formulario from "../componentes/Formulario/Formulario";
 //import imgLogoCadastro from '../favicon.ico';
 import Botao from '../componentes/Botao/Botao';
 

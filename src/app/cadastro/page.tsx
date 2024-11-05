@@ -1,4 +1,4 @@
-import Formulario from "../componentes/Formulario/page";
+import Formulario from "../componentes/Formulario/Formulario";
 
 
 export default function Cadastro(){

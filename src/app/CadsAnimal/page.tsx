@@ -13,7 +13,7 @@ export default function Formulario({ }) {
   const [dataNascimento, setDataNascimento] = useState(''); // Novo estado para data de nascimento
   const router = useRouter(); // Instância do router
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     // Defina a URL dependendo se é login ou cadastro
@@ -46,7 +46,7 @@ export default function Formulario({ }) {
     }
   };
 
-  const handleCancel  = (e) => {
+  const handleCancel  = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     router.push('/animais'); 
   };

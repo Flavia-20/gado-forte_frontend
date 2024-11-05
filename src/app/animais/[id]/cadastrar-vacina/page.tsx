@@ -15,7 +15,7 @@ export default function CadastraVacina(){
         const [dataAplicacao, setDataAplicacao] = useState(''); // Novo estado para data de nascimento
         const router = useRouter(); // Instância do router
       
-        const handleSubmit = async (e) => {
+        const handleSubmit = async (e: { preventDefault: () => void; }) => {
           e.preventDefault();
       
           const url = '/api/cadastrarVacina'; 
@@ -48,7 +48,7 @@ export default function CadastraVacina(){
           }
         };
 
-        const handleCancel  = (e) => {
+        const handleCancel  = (e: { preventDefault: () => void; }) => {
             e.preventDefault();
             router.push('/animais'); // Redireciona para a página inicial
         };

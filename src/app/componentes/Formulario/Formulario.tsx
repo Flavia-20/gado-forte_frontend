@@ -8,10 +8,10 @@ import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
 interface FormularioProps {
-  props: 'login' | 'cadastro';
+  tipo: 'login' | 'cadastro';
 }
 
-export default function Formulario({ props }: FormularioProps)  {
+export default function Formulario({ tipo }: FormularioProps)  {
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router
@@ -20,7 +20,7 @@ export default function Formulario({ props }: FormularioProps)  {
     e.preventDefault();
 
     // Defina a URL dependendo se é login ou cadastro
-    const url = props === 'login' ? '/api/login' : '/api/cadastro';
+    const url = tipo === 'login' ? '/api/login' : '/api/cadastro';
 
     try {
       const response = await fetch(url, {
@@ -40,7 +40,7 @@ export default function Formulario({ props }: FormularioProps)  {
         console.log('Sucesso:', data);
 
         // Redireciona após o login ou cadastro bem-sucedido
-        if (props === 'login') {
+        if (tipo === 'login') {
           router.push('/animais'); // Redireciona para a página "home" após login
         } else {
           router.push('../cadastro'); // Redireciona para a página de sucesso de cadastro
@@ -63,7 +63,7 @@ export default function Formulario({ props }: FormularioProps)  {
         alt="logo"
       />
 
-      <h1 className={styles.h1Form} >{props === 'login' ? 'Login' : 'Seu cadastro'}</h1>
+      <h1 className={styles.h1Form} >{tipo === 'login' ? 'Login' : 'Seu cadastro'}</h1>
       <div>
         <label>Nome:</label>
         <input className={styles.InputForm}
@@ -83,7 +83,7 @@ export default function Formulario({ props }: FormularioProps)  {
         />
       </div>
       <br/>
-      <button type="submit">{props === 'login' ? 'Entrar' : 'Cadastrar'}</button>
+      <button type="submit">{tipo === 'login' ? 'Entrar' : 'Cadastrar'}</button>
     </form>
   );
 }
