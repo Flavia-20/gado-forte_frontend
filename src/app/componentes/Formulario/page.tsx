@@ -7,11 +7,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
-interface FormularioProps {
+interface PageProps {
   tipo: 'login' | 'cadastro';
 }
 
-export default function Formulario({ tipo }: FormularioProps)  {
+export default function Formulario({ tipo }: PageProps)  {
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router
