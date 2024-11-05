@@ -3,8 +3,8 @@
 //import { useEffect, useState } from 'react';
 //import router, { useRouter } from 'next/router';
 //import Botao from '../componentes/Botao/Botao';
-import Header from '@/app/componentes/Header/page';
-import Footer from '@/app/componentes/Footer/page';
+import Header from '@/app/Componentes/Header/page';
+import Footer from '@/app/Componentes/Footer/page';
 
 export default function Animais() {
   //const [animais, setAnimais] = useState([]);

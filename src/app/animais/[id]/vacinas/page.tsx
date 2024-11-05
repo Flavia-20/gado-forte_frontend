@@ -2,9 +2,9 @@
 
 //import { useRouter } from 'next/router';
 //import { useEffect, useState } from 'react';
-import Header from '../../../componentes/Header/page';
-import Footer from '../../../componentes/Footer/page';
-import Botao from '../../../componentes/Botao/Botao';
+import Header from '../../../Componentes/Header/page';
+import Footer from '../../../Componentes/Footer/page';
+import Botao from '../../../Componentes/Botao/Botao';
 
 export default function Vacinas() {
   /*const router = useRouter();

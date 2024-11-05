@@ -2,9 +2,9 @@
 
 //import { useRouter } from 'next/router';
 //import { useEffect, useState } from 'react';
-import Header from '@/app/componentes/Header/page';
-import Footer from '@/app/componentes/Footer/page';
-import Botao from '@/app/componentes/Botao/Botao';
+import Header from '@/app/Componentes/Header/page';
+import Footer from '@/app/Componentes/Footer/page';
+import Botao from '@/app/Componentes/Botao/Botao';
 
 export default function CadastroPeso() {
   /*const router = useRouter();

@@ -1,5 +1,5 @@
-import Header from "../componentes/Header/page";
-import Footer from "../componentes/Footer/page";
+import Header from "../Componentes/Header/page";
+import Footer from "../Componentes/Footer/page";
 import styles from "../calendario/calendario.module.css";
 
 

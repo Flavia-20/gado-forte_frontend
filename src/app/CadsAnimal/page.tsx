@@ -1,7 +1,7 @@
 'use client'; // Adiciona isso para indicar que o componente é um Client Component
 
-import Header from '../componentes/Header/page';
-import Footer from '../componentes/Footer/page';
+import Header from '../Componentes/Header/page';
+import Footer from '../Componentes/Footer/page';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
