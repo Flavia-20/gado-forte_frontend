@@ -3,13 +3,12 @@
 import Image from "next/image";
 import logoPreta from "@/app/icones/logoPreta.png";
 
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../Formulario/formulario.module.css';
 
 interface FormularioProps {
-  tipo: string; // Ou defina como 'Cadastro de Animais' | 'Edição de Animais' se o valor for fixo.
+  tipo: 'login' | 'cadastro';
 }
 
 export default function Formulario({ tipo }: FormularioProps)  {
@@ -17,7 +16,7 @@ export default function Formulario({ tipo }: FormularioProps)  {
   const [senha, setSenha] = useState('');
   const router = useRouter(); // Instância do router
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Defina a URL dependendo se é login ou cadastro
@@ -42,7 +41,7 @@ export default function Formulario({ tipo }: FormularioProps)  {
 
         // Redireciona após o login ou cadastro bem-sucedido
         if (tipo === 'login') {
-          router.push('../animais'); // Redireciona para a página "home" após login
+          router.push('/animais'); // Redireciona para a página "home" após login
         } else {
           router.push('../cadastro'); // Redireciona para a página de sucesso de cadastro
         }
