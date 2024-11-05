@@ -1,7 +1,7 @@
 'use client';
 
-import Header from '@/app/Componentes/Header/page';
-import Footer from '@/app/Componentes/Footer/page';
+import Header from '@/app/componentes/Header/page';
+import Footer from '@/app/componentes/Footer/page';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
