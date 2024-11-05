@@ -33,8 +33,35 @@ export default function Calendario() {
               <td></td>
             </tr>
             <tr>
-              <td>Vacina contra paratifo nos bezerros</td>
-              <td></td>
+            <td>Vacina contra a raiva</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr>
+            </tr>
+            <td>Vacina contra febre aftosa no Planalto de MS</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <tr>
+            </tr>
+            <td>Vacina contra febre  aftosa no Pantanal de MS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <tr>
+            </tr>
+              <td>Vacina contra botulismo</td>
+              <td>x</td>
               <td></td>
               <td></td>
               <td></td>
@@ -42,10 +69,10 @@ export default function Calendario() {
               <td></td>
             </tr>
             <tr>
+              <td>Vacina contra carbunculo sintomatico</td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
+              <td>x</td>
               <td></td>
               <td></td>
               <td></td>
@@ -68,11 +95,83 @@ export default function Calendario() {
           </thead>
           <tbody>
           <tr>
+          <td>Vacina contra febre aftosa no Planalto de MS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <tr>
+            </tr>
+            <td>Vacina contra febre aftosa no Pantanal de MS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <tr>
+            </tr>
+            <td>Vacina contra carbunculo sintomatico</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr>
+            </tr>
             <td>Vacina contra paratifo nas vacas prenhas</td>
               <td>x</td>
               <td>x</td>
               <td>x</td>
               <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+            <td>Campilobacteriose</td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+            <td>Leptospirose</td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+            <td>Rinotraqueíte infecciosa bovina</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+            <td>Diarreia viral bovina</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+            <td>Diarreia por rotavirus e coronavirus</td>
+              <td></td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
               <td></td>
               <td></td>
             </tr>
