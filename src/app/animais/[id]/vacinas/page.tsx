@@ -1,18 +1,28 @@
 'use client';
 
-//import { useRouter } from 'next/router';
-//import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../../../componentes/Header/page';
 import Footer from '../../../componentes/Footer/page';
 import Botao from '../../../componentes/Botao/Botao';
+import { useParams } from 'next/navigation';
+
+interface Vacina {
+  nome: string;
+  dataAplicacao: string;
+}
 
 export default function Vacinas() {
-  /*const router = useRouter();
-  const { id } = router.query; // Pega o ID do animal da URL
-  const [vacinas, setVacinas] = useState([]);
+
+  const { id } = useParams(); // Pega o ID do animal da URL
+  const [vacinas, setVacinas] = useState<Vacina[]>([]);
+  const [isClient, setIsClient] = useState(false); // Estado para verificar se estamos no lado do cliente
 
   useEffect(() => {
-    if (id) {
+    setIsClient(true); // Definimos como true após o componente ser montado no cliente
+  }, []);
+
+  useEffect(() => {
+    if (isClient && id) {
       // Fazendo a requisição para buscar as vacinas desse animal
       fetch(`https://api.exemplo.com/animais/${id}`)
         .then((response) => response.json())
@@ -21,38 +31,39 @@ export default function Vacinas() {
         })
         .catch((error) => console.error('Erro ao buscar vacinas:', error));
     }
-  }, [id]); // Atualiza a requisição sempre que o ID mudar*/
+  }, [id, isClient]); // Atualiza a requisição sempre que o ID mudar*/
 
   return (
     <div>
       <Header />
       <Footer />
-      {/*<main>
-        <h1>Vacinas do Animal {id}</h1>
+      <main>
+        <p>Vacinas do Animal {id}</p>
+       
         {vacinas.length > 0 ? (
           vacinas.map((vacina, index) => (
-            <div key={index}>
-              <p>Nome: {vacina.nome}</p>
-              <p>Data de Aplicação: {vacina.dataAplicacao}</p>
-              <p>Restições: texto de restrições<p>
-            </div>
+              <div key={index}>
+                <p>Nome: {vacina.nome}</p>
+                <p>Data de Aplicação: {vacina.dataAplicacao}</p>
+                
+              </div>
           ))
         ) : (
           <p>Carregando vacinas...</p>
         )}
-      </main>*/}
+      </main>
 
-      <p>aqui vai a lista das vacinas de determinado animal</p>
+      
       <div style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
-            >
-              <p>Vacina: Contra febre</p>
-              <p>Data de aplicação: 30/10/2024</p>
-              <p>texto de restrições dessa vacina</p>
-              
-            </div>
+      >
+        <p>Vacina: Contra febre</p>
+        <p>Data de aplicação: 30/10/2024</p>
+        <p>texto de restrições dessa vacina</p>
+        
+      </div>
 
       <div>{/*estilizar o botão */}
-      <Botao texto="Cadastrar nova vacina" pagina={`../1/cadastrar-vacina`}/>
+      <Botao texto="Cadastrar nova vacina" pagina={`../${id}/Cadastrar-vacina`}/>
       </div>
       
     </div>

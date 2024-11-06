@@ -35,7 +35,7 @@ export default function CadastrarPeso(){
       
             if (response.ok) {
               console.log('Sucesso:', data);
-              router.push('/animais');
+              router.push('/Animais');
       
             } else {
                 {/*colocar um alert aqui */}
@@ -48,7 +48,7 @@ export default function CadastrarPeso(){
 
         const handleCancel  = (e: { preventDefault: () => void; }) => {
             e.preventDefault();
-            router.push('/animais'); // Redireciona para a página inicial
+            router.push('/Animais'); // Redireciona para a página inicial
         };
       
         return (
@@ -71,7 +71,7 @@ export default function CadastrarPeso(){
                     <label>Data da pesagem:</label>
                     <input
                     className={styles.InputForm}
-                    type="date"
+                    type="date" 
                     value={dataPesagem} // Usando o estado correto
                     onChange={(e) => setDataPesagem(e.target.value)} // Atualiza o estado de data de nascimento
                     placeholder="Digite a data da pesagem"

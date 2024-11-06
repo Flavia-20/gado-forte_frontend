@@ -36,7 +36,8 @@ export default function Formulario({ }) {
 
       if (response.ok) {
         console.log('Sucesso:', data);
-        router.push('../animais');
+        window.alert("Cadastro feito!")
+        router.push('../Animais');
 
       } else {
         console.error('Erro:', data.message);
@@ -48,7 +49,7 @@ export default function Formulario({ }) {
 
   const handleCancel  = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    router.push('/animais'); 
+    router.push('/Animais'); 
   };
 
   return (
@@ -90,7 +91,7 @@ export default function Formulario({ }) {
               <label>Data de Nascimento:</label>
               <input
               className={styles.InputForm}
-              type="text"
+              type="date"
               value={dataNascimento} // Usando o estado correto
               onChange={(e) => setDataNascimento(e.target.value)} // Atualiza o estado de data de nascimento
               placeholder="Digite a data de nascimento"

@@ -1,15 +1,20 @@
 'use client';
 
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Header from '@/app/componentes/Header/page';
 import Footer from '@/app/componentes/Footer/page';
 import Botao from '@/app/componentes/Botao/Botao';
+import { useParams } from 'next/navigation';
 
-export default function CadastroPeso() {
-  const router = useRouter();
-  const { id } = router.query; // Pega o ID do animal da URL
-  const [pesos, setPesos] = useState([]);
+interface Peso{
+  peso: number;
+  dataDaPesagem: string;
+}
+
+export default function Pesagens() {
+  const { id } = useParams(); // Pega o ID do animal da URL
+  const [pesos, setPesos] = useState<Peso[]>([]);
 
   useEffect(() => {
     if (id) {
@@ -27,31 +32,34 @@ export default function CadastroPeso() {
     <div>
       <Header />
       <Footer />
+
+    
       <main>
-        <h1>Pesagens do Animal {id}</h1>
+        <p>Pesagens do Animal {id}</p>
+
+        <div style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
+        >
+          <p>Peso do animal: 225</p>
+          <p>Data da pesagem: 15/10/2024</p>
+        
+      </div>
+
         {pesos.length > 0 ? (
           pesos.map((peso, index) => (
-            <div key={index}>
-              {/*<p>Peso do animal: {peso.peso}</p>
-              <p>Data da pesagem: {peso.dataDaPesagem}</p>*/}
+            <div key={index} style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}>
+              <p>Peso do animal: {peso.peso}</p>
+              <p>Data da pesagem: {peso.dataDaPesagem}</p>
             </div>
           ))
         ) : (
           <p>Carregando informações...</p>
         )}
-      </main>*
+      </main>
 
-      <p>aqui vai a lista das pesagens de determinado animal</p>
-      <div 
-              style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
-            >
-              <p>Peso do animal: 225</p>
-              <p>Data da pesagem: 15/10/2024</p>
-           
-            </div>
+      
 
       <div>
-      <Botao texto="Cadastrar nova Pesagem" pagina={`../${id}/cadastro-peso`}
+      <Botao texto="Cadastrar nova Pesagem" pagina={`../${id}/Cadastro-peso`}
       />
       </div>
       
