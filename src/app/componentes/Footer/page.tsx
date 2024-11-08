@@ -33,7 +33,7 @@ export default function Footer(){
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="../cadsAnimal"
+            href="/cadsAnimal"
             rel="noopener noreferrer"
           >
           <svg fill="#000000" 

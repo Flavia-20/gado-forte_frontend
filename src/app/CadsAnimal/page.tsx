@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from '../componentes/Formulario/formulario.module.css';
 
-export default function Formulario({ }) {
+export default function CadsAnimal({ }) {
   const [nome, setNome] = useState('');
   const [raca, setRaca] = useState('');
   const [dataNascimento, setDataNascimento] = useState(''); // Novo estado para data de nascimento
