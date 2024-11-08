@@ -35,7 +35,7 @@ export default function CadastrarPeso(){
       
             if (response.ok) {
               console.log('Sucesso:', data);
-              router.push('/Animais');
+              router.push('/animais');
       
             } else {
                 {/*colocar um alert aqui */}
@@ -48,7 +48,7 @@ export default function CadastrarPeso(){
 
         const handleCancel  = (e: { preventDefault: () => void; }) => {
             e.preventDefault();
-            router.push('/Animais'); // Redireciona para a página inicial
+            router.push('/animais'); // Redireciona para a página inicial
         };
       
         return (

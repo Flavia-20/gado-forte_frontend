@@ -46,20 +46,8 @@ export default function Animais() {
               <p>Nome: {animal.nome}</p>
               <p>Data de Nascimento: {animal.dataDeNascimento}</p>
               <p>Raça: {animal.raca}</p>
-               <div>
-                <button><a href={`../Animais/${animal.id}/Vacinas`}
-                  rel="noopener noreferrer">
-                  <p>Ver Vacinas</p>
-                  </a>
-                </button>
-                <button className="">
-                  <a href={`../Animais/${animal.id}/Pesagens`}
-                  rel="noopener noreferrer">
-                  <p>---Ver Pesagens</p>
-                  </a>
-                </button>
-              </div>
             </div>
+            
           ))
         ) : (""
          
@@ -69,25 +57,43 @@ export default function Animais() {
               style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
             >
               <p>Nome: vaca 1</p>
-              <p>Data de Nascimento: 12/08/2019</p>
+              <p>Data de Nascimento: 09/11/2020</p>
               <p>Raça: mestiço</p>
 
               <div>
-                <button><a href={`../Animais/${1}/Vacinas`}
+                <button><a href={`../animais/${1}/vacinas`}
                   rel="noopener noreferrer">
                   <p>Ver Vacinas</p>
                   </a>
                 </button>
                 <button className="">
-                  <a href={`../Animais/${1}/Pesagens`}
+                  <a href={`../animais/${1}/pesagens`}
                   rel="noopener noreferrer">
                   <p>---Ver Pesagens</p>
                   </a>
                 </button>
               </div>
+            </div>
+            <div 
+              style={{ border: '1px solid gray', padding: '20px', marginBottom: '10px', cursor: 'pointer' }}
+            >
+              <p>Nome: vaca 2</p>
+              <p>Data de Nascimento: 12/08/2019</p>
+              <p>Raça: mestiço</p>
 
-              {/*<Botao href="../animais/${1}/Pesagens" texto="Ver pesagens"></Botao>
-              <Botao href="../animais/${1}/pesagens" texto="Ver pesagens"></Botao>*/}
+              <div>
+                <button><a href={`../animais/${2}/vacinas`}
+                  rel="noopener noreferrer">
+                  <p>Ver Vacinas</p>
+                  </a>
+                </button>
+                <button className="">
+                  <a href={`../animais/${2}/pesagens`}
+                  rel="noopener noreferrer">
+                  <p>---Ver Pesagens</p>
+                  </a>
+                </button>
+              </div>
             </div>
       
       <p>Carregando dados...</p>

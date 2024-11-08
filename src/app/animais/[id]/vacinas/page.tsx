@@ -48,8 +48,8 @@ export default function Vacinas() {
                 
               </div>
           ))
-        ) : (
-          <p>Carregando vacinas...</p>
+        ) : (""
+  
         )}
       </main>
 
@@ -62,8 +62,8 @@ export default function Vacinas() {
         
       </div>
 
-      <div>{/*estilizar o botão */}
-      <Botao texto="Cadastrar nova vacina" pagina={`../${id}/Cadastrar-vacina`}/>
+      <div>
+      <Botao texto="Cadastrar nova vacina" pagina={`../${id}/cadastrar-vacina`}/>
       </div>
       
     </div>

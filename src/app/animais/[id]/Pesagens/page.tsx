@@ -59,7 +59,7 @@ export default function Pesagens() {
       
 
       <div>
-      <Botao texto="Cadastrar nova Pesagem" pagina={`../${id}/Cadastro-peso`}
+      <Botao texto="Cadastrar nova Pesagem" pagina={`../${id}/cadastro-peso`}
       />
       </div>
       

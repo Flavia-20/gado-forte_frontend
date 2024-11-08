@@ -37,7 +37,7 @@ export default function Formulario({ }) {
       if (response.ok) {
         console.log('Sucesso:', data);
         window.alert("Cadastro feito!")
-        router.push('../Animais');
+        router.push('/animais');
 
       } else {
         console.error('Erro:', data.message);
@@ -49,7 +49,7 @@ export default function Formulario({ }) {
 
   const handleCancel  = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    router.push('/Animais'); 
+    router.push('/animais'); 
   };
 
   return (
