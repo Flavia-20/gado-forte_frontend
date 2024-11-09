@@ -15,9 +15,14 @@ interface Peso{
 export default function Pesagens() {
   const { id } = useParams(); // Pega o ID do animal da URL
   const [pesos, setPesos] = useState<Peso[]>([]);
+  const [isClient, setIsClient] = useState(false); // Estado para verificar se estamos no lado do cliente
 
   useEffect(() => {
-    if (id) {
+    setIsClient(true); // Definimos como true após o componente ser montado no cliente
+  }, []);
+
+  useEffect(() => {
+    if (isClient && id) {
       // Fazendo a requisição para buscar as pesagens desse animal
       fetch(`https://api.exemplo.com/animais/${id}/peso`)
         .then((response) => response.json())
@@ -26,7 +31,7 @@ export default function Pesagens() {
         })
         .catch((error) => console.error('Erro ao buscar pesagens:', error));
     }
-  }, [id]); // Atualiza a requisição sempre que o ID mudar
+  }, [id, isClient]); // Atualiza a requisição sempre que o ID mudar
 
   return (
     <div>

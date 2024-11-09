@@ -46,7 +46,21 @@ export default function Animais() {
               <p>Nome: {animal.nome}</p>
               <p>Data de Nascimento: {animal.dataDeNascimento}</p>
               <p>Raça: {animal.raca}</p>
+              <div>
+                <button><a href={`../animais/${1}/vacinas`}
+                  rel="noopener noreferrer">
+                  <p>Ver Vacinas</p>
+                  </a>
+                </button>
+                <button className="">
+                  <a href={`../animais/${1}/pesagens`}
+                  rel="noopener noreferrer">
+                  <p>---Ver Pesagens</p>
+                  </a>
+                </button>
+              </div>
             </div>
+            
             
           ))
         ) : (""
@@ -61,11 +75,11 @@ export default function Animais() {
               <p>Raça: mestiço</p>
 
               <div>
-                <button><a href={`../animais/${1}/vacinas`}
+                {/*<button><a href={`../animais/${1}/vacinas`}
                   rel="noopener noreferrer">
                   <p>Ver Vacinas</p>
                   </a>
-                </button>
+                </button>*/}
                 <button className="">
                   <a href={`../animais/${1}/pesagens`}
                   rel="noopener noreferrer">
@@ -82,11 +96,11 @@ export default function Animais() {
               <p>Raça: mestiço</p>
 
               <div>
-                <button><a href={`../animais/${2}/vacinas`}
+                 {/*<button><a href={`../animais/${2}/vacinas`}
                   rel="noopener noreferrer">
                   <p>Ver Vacinas</p>
                   </a>
-                </button>
+                </button>*/}
                 <button className="">
                   <a href={`../animais/${2}/pesagens`}
                   rel="noopener noreferrer">
