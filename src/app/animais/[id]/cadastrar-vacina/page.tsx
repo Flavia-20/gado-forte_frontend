@@ -4,12 +4,12 @@ import Header from '@/app/componentes/Header/page';
 import Footer from '@/app/componentes/Footer/page';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Hook para redirecionamento
+import { useParams, useRouter } from 'next/navigation'; // Hook para redirecionamento
 import styles from "@/app/componentes/Formulario/formulario.module.css";
 
 
 export default function CadastraVacina(){
-        
+        const { id } = useParams(); // Pega o ID do animal da URL
         const [nome, setNome] = useState('');
         const [aplicador, setAplicador] = useState('');
         const [dataAplicacao, setDataAplicacao] = useState(''); // Novo estado para data de nascimento
@@ -18,7 +18,7 @@ export default function CadastraVacina(){
         const handleSubmit = async (e: { preventDefault: () => void; }) => {
           e.preventDefault();
       
-          const url = '/api/cadastrarVacina'; 
+          const url = `/api/${id}/cadastrarVacina`; 
       
           try {
             const response = await fetch(url, {
@@ -58,7 +58,7 @@ export default function CadastraVacina(){
               <Header/>
               <Footer/>              
               <form onSubmit={handleSubmit} className={styles.FormLogin}>
-                <h1>Cadastro da vacina </h1>
+                <h1>Cadastro da vacina<br></br> do animal {id}</h1>
                 <br />
                 <div>
                     <label>Nome da vacina:</label>

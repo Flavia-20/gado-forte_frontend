@@ -24,7 +24,7 @@ export default function Vacinas() {
   useEffect(() => {
     if (isClient && id) {
       // Fazendo a requisição para buscar as vacinas desse animal
-      fetch(`https://api.exemplo.com/animais/${id}`)
+      fetch(`https://api.exemplo.com/animais/${id}/vacinas`)
         .then((response) => response.json())
         .then((data) => {
           setVacinas(data); // Armazena os dados das vacinas
