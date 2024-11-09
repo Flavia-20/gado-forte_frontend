@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Gado Forte</title>
+    <script src="vacina.js" defer></script>
+</head>
+
+<body>
+    <h1>Vacina</h1>
+
+    <h3>Buscar</h3>
+
+    <form action="" class="form-vacina-get">
+        <input type="number" name="idGet" class="idGet" placeholder="ID do vacina">
+        <button>Buscar</button>
+    </form>
+
+    <h3>Informações do vacina</h3>
+    <div>
+        <p class="nomePopularDisplay">Nome popular: </p>
+        <p class="nomeTecnicoDisplay">Nome técnico: </p>
+        <p class="textoDeRestricoesDisplay">Texto de restrições: </p>
+    </div>
+
+    <h3>Cadastro</h3>
+
+    <form action="" class="form-vacina-post">
+        <input type="text" name="nomePopular" class="nomePopular" placeholder="Nome popular">
+        <input type="text" name="nomeTecnico" class="nomeTecnico" placeholder="Nome Tecnico">
+        <input type="text" name="texto_de_restricoes" class="texto-de-restricoes" placeholder="texto de restrições"
+            width="0" height="50">
+        <button>Cadastrar</button>
+    </form>
+
+    <h3>Atualizar</h3>
+
+    <form action="" class="form-vacina-put">
+        <input type="number" name="idPut" class="idPut" placeholder="ID do vacina">
+        <input type="text" name="textoRestricoesAtualizar" class="textoRestricoesAtualizar"
+            placeholder="Novo texto de restrições">
+        <button>Atualizar</button>
+    </form>
+
+
+    <h3>Deletar</h3>
+
+    <form action="" class="form-vacina-delete">
+        <input type="number" name="idDeletar" class="idDeletar" placeholder="id">
+        <button>Deletar</button>
+    </form>
+</body>
+
+</html>

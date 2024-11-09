@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Gado Forte</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="animal.js" defer></script>
+
+</head>
+
+<body>
+
+    <h1>Animal</h1>
+
+    <h3>Buscar</h3>
+
+    <form action="" class="form-animal-get">
+        <input type="number" name="idGet" class="idGet" placeholder="ID do animal">
+        <button>Buscar</button>
+    </form>
+
+    <h3>Informações do Animal</h3>
+    <div>
+        <p class="nomeDisplay">Nome: </p>
+        <p class="racaDisplay">Raça: </p>
+        <p class="dataNascimentoDisplay">Data de Nascimento: </p>
+    </div>
+
+    <h3>Cadastro</h3>
+
+    <form action="" class="form-animal-post">
+        <input type="text" name="nome" class="nome" placeholder="nome">
+        <input type="text" name="raca" class="raca" placeholder="raca">
+        <input type="date" name="dataNascimento" class="data_de_nascimento" placeholder="data de nascimento">
+        <button>Cadastrar</button>
+    </form>
+
+    <h3>Atualizar</h3>
+
+    <form action="" class="form-animal-put">
+        <input type="number" name="idPut" class="idPut" placeholder="ID do animal">
+        <input type="text" name="nomeAtualizar" class="nomeAtualizar" placeholder="Novo nome">
+        <button>Atualizar</button>
+    </form>
+
+
+    <h3>Deletar</h3>
+
+    <form action="" class="form-animal-delete">
+        <input type="number" name="idDeletar" class="idDeletar" placeholder="id">
+        <button>Deletar</button>
+    </form>
+
+</body>
+
+</html>

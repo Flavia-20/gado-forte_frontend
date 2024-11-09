@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Gado Forte</title>
+    <script src="aplicacaoVacina.js" defer></script>
+</head>
+
+<body>
+    <h1>Aplicação de Vacina</h1>
+
+    <h3>Buscar</h3>
+
+    <form action="" class="form-aplicacaoVacina-get">
+        <input type="number" name="idGet" class="idGet" placeholder="ID do aplicacaoVacina">
+        <button>Buscar</button>
+    </form>
+
+    <h3>Informações do aplicacaoVacina</h3>
+    <div>
+        <p class="idVacinaDisplay">Id da vacina: </p>
+        <p class="idAnimalDisplay">Id do animal: </p>
+        <p class="idUsuarioDisplay">Id do usuário: </p>
+        <p class="dataDeAplicacaoDisplay">Data de Aplicação: </p>
+    </div>
+
+    <h3>Cadastro</h3>
+
+    <form action="" class="form-aplicacaoVacina-post">
+        <input type="number" name="idVacina" class="idVacina" placeholder="Id da Vacina">
+        <input type="number" name="idAnimal" class="idAnimal" placeholder="Id do Animal">
+        <input type="number" name="idUsuario" class="idUsuario" placeholder="Id do Usuário">
+        <input type="date" name="dataDeAplicacao" class="dataDeAplicacao" placeholder="Data de aplicação">
+        <button>Cadastrar</button>
+    </form>
+
+    <!-- <h3>Atualizar</h3>
+
+    <form action="" class="form-aplicacaoVacina-put">
+        <input type="number" name="idPut" class="idPut" placeholder="ID do aplicacaoVacina">
+        <input type="text" name="textoRestricoesAtualizar" class="textoRestricoesAtualizar"
+            placeholder="Novo texto de restrições">
+        <button>Atualizar</button>
+    </form> -->
+
+
+    <h3>Deletar</h3>
+
+    <form action="" class="form-aplicacaoVacina-delete">
+        <input type="number" name="idDeletar" class="idDeletar" placeholder="id">
+        <button>Deletar</button>
+    </form>
+</body>
+
+</html>

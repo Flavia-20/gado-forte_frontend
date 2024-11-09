@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Gado Forte</title>
+    <script src="./pesagem.js" defer></script>
+</head>
+
+<body>
+    <h1>Pesagem</h1>
+
+    <h3>Buscar</h3>
+
+    <form action="" class="form-pesagem-get">
+        <input type="number" name="idGet" class="idGet" placeholder="ID do pesagem">
+        <button>Buscar</button>
+    </form>
+
+    <h3>Informações do pesagem</h3>
+    <div>
+        <p class="pesoDisplay">Peso: </p>
+        <p class="dataDaPesagemDisplay">Data da pesagem: </p>
+        <p class="idAnimalDisplay">idAnimal: </p>
+    </div>
+
+    <h3>Cadastro</h3>
+
+    <form action="" class="form-pesagem-post">
+        <input type="number" name="peso" class="peso" placeholder="Peso" step="0.01" min="0.1" max="500">
+        <input type="date" name="dataDaPesagem" class="dataDaPesagem" placeholder="Data da pesagem">
+        <input type="number" name="idAnimal" class="idAnimal" placeholder="Id do animal">
+        <button>Cadastrar</button>
+    </form>
+
+    <h3>Atualizar</h3>
+
+    <form action="" class="form-pesagem-put">
+        <input type="number" name="idPut" class="idPut" placeholder="ID do pesagem">
+        <input type="number" name="pesoAtualizar" class="pesoAtualizar" placeholder="Novo peso">
+        <input type="date" name="dataDaPesagemAtualizar" class="dataDaPesagemAtualizar" placeholder="Inserir nova data">
+        <button>Atualizar</button>
+    </form>
+
+    <h3>Deletar</h3>
+
+    <form action="" class="form-pesagem-delete">
+        <input type="number" name="idDeletar" class="idDeletar" placeholder="ID">
+        <button>Deletar</button>
+    </form>
+</body>
+
+</html>
