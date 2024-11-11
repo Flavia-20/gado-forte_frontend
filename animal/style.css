@@ -9,7 +9,7 @@ body{
     font-size:x-large;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /*background-image: url("../img/image.png") ;*/
-    background-color: rgba(210, 205, 142, 0.177);
+    background-color: rgb(255, 255, 252);
 }
 
 .div_header{
@@ -29,7 +29,7 @@ body{
     gap: 2.5rem;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: rgba(128, 128, 128, 0.238);
+    background-color: rgba(154, 153, 153, 0.238);
     box-shadow: 0px 2px 2px rgba(57, 57, 57, 0.851);
 }
 
