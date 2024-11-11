@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size:x-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*background-image: url("../img/image.png") ;*/
+    background-color: rgba(210, 205, 142, 0.177);
+}
+
+.div_header{
+    height: 7rem;
+    width: 100%;
+    background-color: #0A8808;
+    display: flex;
+    font-weight: 600;
+    align-items: center; 
+    column-gap: 2rem;
+    color: white;
+}
+
+.header_nav{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.238);
+    box-shadow: 0px 2px 2px rgba(57, 57, 57, 0.851);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    margin: 5%;
+}
+
+section{
+    box-shadow: 0px 0px 5px black;
+    border-radius: 20px;
+    padding: 12px;
+    background-color:rgba(234, 231, 231, 0.542);
+}
+
+form{ 
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+input{
+    border-color:rgba(128, 128, 128, 0.564);
+    height: 2.5rem;
+    border-radius: 10px;  
+    width: 70%;
+}
+
+.btn{
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0.5rem;
+    margin: 4px;
+    font-size: large;
+    text-decoration: none;
+}
+
+.btn_azul{
+    background-color: rgb(59, 105, 245);
+}
+.btn_verde{
+    background-color: rgb(32, 203, 66);
+}
+.btn_laranja{
+    background-color: orange;
+}
+.btn_vermelho{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
